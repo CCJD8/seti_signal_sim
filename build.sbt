@@ -12,9 +12,9 @@ description := "SETI Signal Simulator"
 javaSource in Compile := baseDirectory.value / "apps"
 scalaSource in Compile := baseDirectory.value / "spark"
 
-scalaVersion := "3.7.2"
+scalaVersion := "2.11.12"
 
-crossScalaVersions := Seq("3.7.2") 
+crossScalaVersions := Seq("2.11.12") 
 
 crossVersion := CrossVersion.binary
 
@@ -37,7 +37,7 @@ libraryDependencies ++= {
   //   case "2.11.8" ==> "2.1.0" 
   //   case "2.11.7" ==> "2.0.2"
   // }
-  val sparkVersion =  if (scalaVersion.value == "3.7.2") "2.1.0" else "2.0.2"
+  val sparkVersion =  if (scalaVersion.value == "2.11.12") "2.1.0" else "2.0.2"
   Seq(
     "org.apache.spark" %%  "spark-core"   %  sparkVersion % "provided",
     "org.apache.spark" %%  "spark-sql"    %  sparkVersion % "provided",
@@ -95,6 +95,8 @@ resourceDirectory in Compile := baseDirectory.value / "resources"
 compileOrder := CompileOrder.JavaThenScala
 
 mainClass in Compile := Some("org.seti.simulator.SETISim")
+
+libraryDependencies += "com.ibm.ibmos2spark" %% "ibmos2spark" % "0.0.7"
 
 //resolvers +=  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
