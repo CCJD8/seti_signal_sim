@@ -14,7 +14,7 @@ scalaSource in Compile := baseDirectory.value / "spark"
 
 scalaVersion := "3.7.2"
 
-crossScalaVersions := Seq("2.11.7", "2.11.8") 
+crossScalaVersions := Seq("3.7.2") 
 
 crossVersion := CrossVersion.binary
 
