@@ -37,7 +37,7 @@ libraryDependencies ++= {
   //   case "2.11.8" ==> "2.1.0" 
   //   case "2.11.7" ==> "2.0.2"
   // }
-  val sparkVersion =  if (scalaVersion.value == "2.11.8") "2.1.0" else "2.0.2"
+  val sparkVersion =  if (scalaVersion.value == "3.7.2") "2.1.0" else "2.0.2"
   Seq(
     "org.apache.spark" %%  "spark-core"   %  sparkVersion % "provided",
     "org.apache.spark" %%  "spark-sql"    %  sparkVersion % "provided",
