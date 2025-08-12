@@ -12,7 +12,7 @@ description := "SETI Signal Simulator"
 javaSource in Compile := baseDirectory.value / "apps"
 scalaSource in Compile := baseDirectory.value / "spark"
 
-scalaVersion := "2.11.8"
+scalaVersion := "3.7.2"
 
 crossScalaVersions := Seq("2.11.7", "2.11.8") 
 
