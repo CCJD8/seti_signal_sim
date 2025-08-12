@@ -98,6 +98,8 @@ mainClass in Compile := Some("org.seti.simulator.SETISim")
 
 libraryDependencies += "com.ibm.ibmos2spark" %% "ibmos2spark" % "0.0.7"
 
+javacOptions ++= Seq("--release", "8") // Force java version to 8
+
 //resolvers +=  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 //can't remove Scala if want to retain the ability to run the output jar on local JVM(?)
